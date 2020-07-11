@@ -1,0 +1,26 @@
+body {
+    background-image: url("assets/pokemon-background-2.jpg");
+}
+
+#pokemon-logo{
+    width: 200px;
+}
+
+#search {
+    width: 200px;
+}
+
+#deck-of-pokemons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#cardPicture {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    border: 3px solid black ;
+    border-radius: 10px;
+    padding-top: 20px;
+}
