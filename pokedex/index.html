@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="styles.css">
     <title>Pokedex</title>
 </head>
-
 <body>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar sticky-top navbar-light bg-light">
         <img id="pokemon-logo" src="assets/pokemon-logo.png" alt="">
         <form class="form-inline">
-            <input id="search" class="form-control mr-sm-2" type="search" placeholder="Pokemon Number"
-                aria-label="Search" id="myInput">
-            <button onclick=getInputValue() class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input placeholder="Pokemon Number" class="form-control mr-sm-2" 
+                aria-label="Search" id="pokemonInput">
+                <button onclick="getOnePokemon()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Search
+                  </button>
+                  
         </form>
     </nav>
     <div class="container">
@@ -24,6 +26,20 @@
     </div>
     <footer>
     </footer>
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" >
+        <div class="modal-body card" id="modal-one-pokemon">
+          
+        </div>
+        <div class="modal-footer">
+          <button onclick="clearModal()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
